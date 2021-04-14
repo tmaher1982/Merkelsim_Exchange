@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 int main()
 {
@@ -23,10 +24,10 @@ int main()
         std::cout << "6: Continue " << std::endl;
 
         // 7 exit
-        std::cout >> "7: Exit " << std::endl;
+        std::cout << "7: Exit " << std::endl;
 
         std::cout << "=============== " << std::endl;
-        std::cout << "Type in 1-6 " << std::endl;
+        std::cout << "Type in 1-7 " << std::endl;
 
         int userOption;
         std::cin >> userOption;
@@ -71,7 +72,7 @@ int main()
         if (userOption == 7)
         {
             std::cout << "Exit.." << std::endl;
-            exit();
+            exit(0);
         }
     }
 
