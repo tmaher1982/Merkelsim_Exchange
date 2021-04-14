@@ -74,6 +74,11 @@ int main()
             std::cout << "Exit.." << std::endl;
             exit(0);
         }
+
+        if (userOption > 7 || userOption < 1)
+        {
+            std::cout << "Enter a valid number 1 - 7 " << std::endl;
+        }
     }
 
     return 0;
