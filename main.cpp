@@ -28,17 +28,24 @@ void printMenu()
     std::cout << "Type in 1-7 " << std::endl;   
 }
 
+int getUserOption() {
+    int userOption;
+
+    std::cout << "Type in 1 - 7 " << std::endl;
+    std::cin >> userOption;
+    std::cout << "You chose: " << userOption << std::endl;
+
+    return userOption;
+}
 int main()
 {
     
     while(true)
     {
         printMenu();
-        
-        int userOption;
-        std::cin >> userOption;
 
-        std::cout << "You chose: " << userOption << std::endl;
+        int userOption = getUserOption();
+        
 
         if (userOption == 0) // bad input
         {
