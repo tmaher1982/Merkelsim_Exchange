@@ -25,7 +25,7 @@ void printMenu()
     std::cout << "7: Exit " << std::endl;
 
     std::cout << "=============== " << std::endl;
-    std::cout << "Type in 1-7 " << std::endl;   
+    // std::cout << "Type in 1-7 " << std::endl;   
 }
 
 int getUserOption() {
@@ -37,61 +37,64 @@ int getUserOption() {
 
     return userOption;
 }
+
+void processUserOption (int userOption)
+{
+    if (userOption == 0) // bad input
+    {
+        std::cout << "Invalid choice. Choose 1 - 6" << std::endl;
+    }
+
+    if (userOption == 1) // bad input
+    {
+        std::cout << "Your aim is to make money. Analyse the market and make bids and offers." << std::endl;
+    }
+
+    if (userOption == 2) // bad input
+    {
+        std::cout << "Market looks good" << std::endl;
+    }
+
+    if (userOption == 3) // bad input
+    {
+        std::cout << "Make an offer - enter the amount" << std::endl;
+    }
+
+    if (userOption == 4) // bad input
+    {
+        std::cout << "Make a bid - enter the amount" << std::endl;
+    }
+
+    if (userOption == 5) // bad input
+    {
+        std::cout << "Your wallet is emply. " << std::endl;
+    }
+
+    if (userOption == 6) // bad input
+    {
+        std::cout << "Going to next time frame.." << std::endl;
+    }
+
+    if (userOption == 7)
+    {
+        std::cout << "Exit.." << std::endl;
+        exit(0);
+    }
+
+    if (userOption > 7 || userOption < 1)
+    {
+        std::cout << "Enter a valid number 1 - 7 " << std::endl;
+    }
+}
+
 int main()
 {
     
     while(true)
     {
         printMenu();
-
         int userOption = getUserOption();
-        
-
-        if (userOption == 0) // bad input
-        {
-            std::cout << "Invalid choice. Choose 1 - 6" << std::endl;
-        }
-
-        if (userOption == 1) // bad input
-        {
-            std::cout << "Your aim is to make money. Analyse the market and make bids and offers." << std::endl;
-        }
-
-        if (userOption == 2) // bad input
-        {
-            std::cout << "Market looks good" << std::endl;
-        }
-
-        if (userOption == 3) // bad input
-        {
-            std::cout << "Make an offer - enter the amount" << std::endl;
-        }
-
-        if (userOption == 4) // bad input
-        {
-            std::cout << "Make a bid - enter the amount" << std::endl;
-        }
-
-        if (userOption == 5) // bad input
-        {
-            std::cout << "Your wallet is emply. " << std::endl;
-        }
-
-        if (userOption == 6) // bad input
-        {
-            std::cout << "Going to next time frame.." << std::endl;
-        }
-
-        if (userOption == 7)
-        {
-            std::cout << "Exit.." << std::endl;
-            exit(0);
-        }
-
-        if (userOption > 7 || userOption < 1)
-        {
-            std::cout << "Enter a valid number 1 - 7 " << std::endl;
-        }
+        processUserOption(userOption);
     }
 
     return 0;
