@@ -136,8 +136,13 @@ int main()
 
     std::string timestamp{"2020/03/17 17:01:24.884492"};
     std::string product{"BTC/USDT"};
-    std::string orderType{"bid"};
+    // std::string orderType{"bid"};
+
+    enum class OrderBookType{bid, ask};
+    OrderBookType orderType = OrderBookType::bid;
+
     
+
 
     while(true)
     {
