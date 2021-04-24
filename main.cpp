@@ -228,8 +228,23 @@ int main()
                           "BTC/USDT", 
                           OrderBookType::bid });
     
-    std::cout << "The price is " << orders[1].price << std::endl;
+    //std::cout << "The price is " << orders[1].price << std::endl;
 
-    
+    // This makes copies, the & prevents making the copies.Call by reference
+    for (OrderBookEntry& order: orders)
+    {
+        std::cout << "The price is " << order.price << std::endl;
+    }
+
+    // Note: i++ is less efficient than ++i
+    for (unsigned int i = 0; i < orders.size(); ++i)
+    {
+        std::cout << "The price is " << orders[i].price << std::endl;
+    }
+
+    for (unsigned int i = 0; i < orders.size(); ++i)
+    {
+        std::cout << "The price is " << orders.at(i).price << std::endl;
+    }
 
 }
