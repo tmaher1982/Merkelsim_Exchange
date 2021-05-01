@@ -2,18 +2,13 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-
-
-
+#include "OrderBookEntry.h"
 
 // Extra Challenges form Week 3 to work on later:-
 // double computeAveragePrice(std::vector<OrderBookEntry>& entries)
 // double computeLowPrice(std::vector<OrderBookEntry>& entries)
 // double computeHighPrice(std::vector<OrderBookEntry>& entries)
 // double computePriceSpread(std::vector<OrderBookEntry>& entries)
-
-
-
 
 
 void printMenu()
