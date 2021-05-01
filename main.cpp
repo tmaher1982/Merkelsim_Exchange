@@ -3,36 +3,15 @@
 #include <string>
 #include <vector>
 
-enum class OrderBookType{bid, ask};
 
-class OrderBookEntry
-{
-    public: 
 
-        OrderBookEntry( double _price,
-                        double _amount,
-                        std::string _timestamp,
-                        std::string _product,
-                        OrderBookType _orderType)
-        : price(_price), 
-            amount(_amount), 
-            timestamp(_timestamp),
-            product(_product), 
-            orderType(_orderType)
 
-        {
-            
+// Extra Challenges form Week 3 to work on later:-
+// double computeAveragePrice(std::vector<OrderBookEntry>& entries)
+// double computeLowPrice(std::vector<OrderBookEntry>& entries)
+// double computeHighPrice(std::vector<OrderBookEntry>& entries)
+// double computePriceSpread(std::vector<OrderBookEntry>& entries)
 
-        }
-
-        
-        double price;
-        double amount;
-        std::string timestamp;
-        std::string product;
-        OrderBookType orderType;
-
-};
 
 
 
