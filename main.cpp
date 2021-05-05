@@ -8,7 +8,8 @@
 int main()
 {
     MerkelMain app{};
-    app.printMenu();
+    app.init();
+    
 }
 
 // Cleaning the main function 
