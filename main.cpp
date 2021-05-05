@@ -9,7 +9,6 @@ int main()
 {
     MerkelMain app{};
     app.init();
-    
 }
 
 // Cleaning the main function 
