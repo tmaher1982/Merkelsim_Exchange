@@ -8,10 +8,10 @@
 
 int main()
 {
-    // MerkelMain app{};
-    // app.init();
+    MerkelMain app{};
+    app.init();
     // CSVReader reader;
-    CSVReader::readCSV("20200317.csv");
+    // CSVReader::readCSV("20200317.csv");
 }
 
 // Cleaning the main function 
