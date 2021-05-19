@@ -112,6 +112,7 @@ void MerkelMain::printWallet()
 void MerkelMain::gotoNextTimeframe()
 {
     std::cout << "Going to next time frame.." << std::endl;
+    currentTime = OrderBook.getNextTime(currentTime);
 }
 
 void MerkelMain::exitMenu()
