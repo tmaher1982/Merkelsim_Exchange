@@ -15,8 +15,10 @@ void MerkelMain::init()
 {
 
     int input;
+    currentTime = OrderBook.getEarliestTime();
     while(true)
     {   
+
         printMenu();
         input = getUserOption();
         processUserOption(input);
@@ -50,6 +52,8 @@ void MerkelMain::printMenu()
 
     std::cout << "=============== " << std::endl;
     // std::cout << "Type in 1-7 " << std::endl;   
+
+    std::cout << "Current time is: " << currentTime << std::endl;
 }
 
 void MerkelMain::printHelp()
