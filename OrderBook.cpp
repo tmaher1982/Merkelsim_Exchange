@@ -1,6 +1,6 @@
 #include "OrderBook.h"
 #include "CSVReader.h"
-
+#include <map>
 
 /** The OrderBook class presents a high level interface on all the orders in the order book data set, including query functions to find out which products are in the data set, and to retrieve a subset of the orders using filters.
 */
@@ -14,6 +14,20 @@ OrderBook::OrderBook(std::string filename)
 std::vector<std::string> OrderBook::getKnowProducts()
 {
     std::vector<std::string> products;
+
+    std::map<std::string,bool> prodMap;
+
+    for (OrderBookEntry& e : orders)
+    {
+        prodMap[e.product] = true;
+    }
+
+    // now flatten the map to a vector of strings
+    for (auto const& e : prodMap)
+    {
+        products.push_back(e.first);
+    }
+
     return products;
 }
 /** return vector of orders according to the sent filters */
