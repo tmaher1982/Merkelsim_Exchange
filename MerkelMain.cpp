@@ -11,7 +11,7 @@ MerkelMain::MerkelMain()
 
 void MerkelMain::init()
 {
-    loadOrderBook();
+
     int input;
     while(true)
     {   
@@ -21,11 +21,7 @@ void MerkelMain::init()
     }
 }
 
-void MerkelMain::loadOrderBook()
-{
-    
-    orders = CSVReader::readCSV("20200317.csv");
-}
+
 
 void MerkelMain::printMenu()
 {
