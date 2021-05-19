@@ -24,6 +24,6 @@ class MerkelMain
         int getUserOption();
         void processUserOption (int userOption);
 
-        OrderBook OrderBook{"2020317.csv"};
+        OrderBook OrderBook{"20200317.csv"};
         
 };
