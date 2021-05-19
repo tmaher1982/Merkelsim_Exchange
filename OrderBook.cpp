@@ -1,6 +1,10 @@
 #include "OrderBook.h"
 #include "CSVReader.h"
 
+
+/** The OrderBook class presents a high level interface on all the orders in the order book data set, including query functions to find out which products are in the data set, and to retrieve a subset of the orders using filters.
+*/
+
 /** construct, reading a csv data file */
 OrderBook::OrderBook(std::string filename)
 {

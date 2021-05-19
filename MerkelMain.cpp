@@ -4,6 +4,8 @@
 #include "OrderBookEntry.h"
 #include "CSVReader.h"
 
+/** The MerkelMain class represents the application itself, and it deals with user input and menu printing. */
+
 MerkelMain::MerkelMain()
 {
 
