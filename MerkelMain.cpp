@@ -65,6 +65,7 @@ void MerkelMain::printMarketStats()
         std::vector<OrderBookEntry> entries = OrderBook.getOrders(OrderBookType::ask, 
                                                       p,"2020/03/17 17:01:24.884492");
         std::cout <<"Asks seen: " << entries.size() << std::endl;
+        std::cout << "Max ask:: " << OrderBook::getHighPrice(entries) << std::endl;
                                                                         
     }
 
