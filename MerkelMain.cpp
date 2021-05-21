@@ -98,7 +98,11 @@ void MerkelMain::enterAsk()
 {
     std::cout << "Make an ask - enter the amount: product, price, amount, eg ETF/GTC,200,0.5" << std::endl;
     std::string input;
+    
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
     std::getline(std::cin, input);
+
     std::cout << "You typed: " << input << std::endl;
 
 }
