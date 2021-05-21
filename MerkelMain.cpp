@@ -94,10 +94,15 @@ void MerkelMain::printMarketStats()
 
 }
 
-void MerkelMain::enterOffer()
+void MerkelMain::enterAsk()
 {
-    std::cout << "Make an offer - enter the amount" << std::endl;
+    std::cout << "Make an ask - enter the amount: product, price, amount, eg ETF/GTC,200,0.5" << std::endl;
+    std::string input;
+    std::getline(std::cin, input);
+    std::cout << "You typed: " << input << std::endl;
+
 }
+
 
 void MerkelMain::enterBid()
 {
@@ -155,7 +160,7 @@ void MerkelMain::processUserOption (int userOption)
 
     if (userOption == 3) // bad input
     {
-        enterOffer();
+        enterAsk();
     }
 
     if (userOption == 4) // bad input
