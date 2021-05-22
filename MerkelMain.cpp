@@ -99,7 +99,7 @@ void MerkelMain::enterAsk()
     std::cout << "Make an ask - enter the amount: product, price, amount, eg ETH/BTC,200,0.5" << std::endl;
     std::string input;
     
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     std::getline(std::cin, input);
 
@@ -157,10 +157,20 @@ void MerkelMain::handleOtherOptions()
 }
 
 int MerkelMain::getUserOption() {
-    int userOption;
-
+    int userOption = 0;
+    std::string line;
     std::cout << "Type in 1 - 7 " << std::endl;
-    std::cin >> userOption;
+    std::getline(std::cin, line);
+    try {
+        userOption = std::stoi(line);    
+    }
+    catch(const std::exception& e)
+    {
+        // 
+    }
+    
+
+    //std::cin >> userOption;
     std::cout << "You chose: " << userOption << std::endl;
 
     return userOption;
