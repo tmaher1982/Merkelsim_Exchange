@@ -148,8 +148,8 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string product, std:
 //                 #go onto the next ask
 //                 break
                     break;
-
                 }
+                
 //             if bid.amount > ask.amount: # ask is completely gone slice the bid
                 if (bid.amount > ask.amount)
                 {
@@ -164,14 +164,13 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string product, std:
 //                 #ask is completely gone, so go to next ask
 //                 break
                     break;
-
                 }
 
 //             if bid.amount < ask.amount # bid is completely gone, slice the ask
                 if (bid.amount < ask.amount)
                 {
-//                 sale.amount = bid.amount = bid.amount
-                    sale.amount = ask.amount;
+//                 sale.amount = bid.amount 
+                    sale.amount = bid.amount;
 //                 sales.append(sales)
                     sales.push_back(sale);
 //                 # update the ask
@@ -184,7 +183,6 @@ std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string product, std:
 //                 continue
                     continue;
                 }
-
             }
         }
     } 
