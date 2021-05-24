@@ -3,6 +3,7 @@
 #include <vector>
 #include "OrderBookEntry.h"
 #include "OrderBook.h"
+#include "Wallet.h"
 
 class MerkelMain
 {
@@ -28,5 +29,8 @@ class MerkelMain
         
         //OrderBook OrderBook{"20200317.csv"};
         OrderBook OrderBook{"test.csv"};
+
+        Wallet wallet;
+        
         
 };
